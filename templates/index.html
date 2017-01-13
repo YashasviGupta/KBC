@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+
+function halfFunc()
+{
+	document.getElementById('a').disabled = true; 
+	document.getElementById('d').disabled = true;
+	document.getElementById('half').disabled = true; 
+	document.getElementById('a').style.backgroundColor = "#A9A9A9";
+	document.getElementById('d').style.backgroundColor = "#A9A9A9";
+}
+
+function myFunction(clicked_id) 
+{
+	q=document.getElementById('quit');
+	if(clicked_id=='a')
+	{
+		alert(clicked_id);
+		q.value = "GAME ENDED";
+		document.getElementById('half').remove();
+		document.getElementById('b').disabled = true; 
+		document.getElementById('c').disabled = true;
+		document.getElementById('d').disabled = true;  
+		document.getElementById('a').style.backgroundColor = "#FF6666";
+		document.getElementById('b').style.backgroundColor = "#A9A9A9";
+		document.getElementById('c').style.backgroundColor = "#A9A9A9";
+		document.getElementById('d').style.backgroundColor = "#A9A9A9";
+	}
+	else if(clicked_id=='b')
+	{
+		alert(clicked_id);
+		q.value = "GAME ENDED";
+		document.getElementById('half').remove();
+		document.getElementById('a').disabled = true; 
+		document.getElementById('c').disabled = true;
+		document.getElementById('d').disabled = true;
+		document.getElementById('a').style.backgroundColor = "#A9A9A9";
+		document.getElementById('b').style.backgroundColor = "#FF6666";
+		document.getElementById('c').style.backgroundColor = "#A9A9A9";
+		document.getElementById('d').style.backgroundColor = "#A9A9A9";  
+	}
+	else if(clicked_id=='c')
+	{
+		alert(clicked_id);
+		q.value = "NEXT Q >>";
+		q.style.background = 'green';
+		document.getElementById('half').remove();
+		document.getElementById('a').disabled = true; 
+		document.getElementById('b').disabled = true;
+		document.getElementById('d').disabled = true;
+		document.getElementById('a').style.backgroundColor = "#A9A9A9";
+		document.getElementById('b').style.backgroundColor = "#A9A9A9";
+		document.getElementById('c').style.backgroundColor = "#33CC00";
+		document.getElementById('d').style.backgroundColor = "#A9A9A9";  
+	}
+	else if(clicked_id=='d')
+	{
+		alert(clicked_id);
+		q.value = "GAME ENDED";
+		document.getElementById('half').remove();
+		document.getElementById('a').disabled = true; 
+		document.getElementById('b').disabled = true;
+		document.getElementById('c').disabled = true;
+		document.getElementById('a').style.backgroundColor = "#A9A9A9";
+		document.getElementById('b').style.backgroundColor = "#A9A9A9";
+		document.getElementById('c').style.backgroundColor = "#A9A9A9";  
+		document.getElementById('b').style.backgroundColor = "#FF6666";
+	}
+}
+</script>
+<style type="text/css">
+.myButton {
+	background-color:#44c767;
+	-moz-
+
+	border-radius:41px;
+	-webkit-border-radius:41px;
+	
+	border-radius:41px;
+	display:inline-block;
+
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	
+	font-size:19px;
+	padding:24px 166px;
+	
+
+	decoration:none;
+	text-shadow:0px 2px 0px #2f6627;
+}
+
+.myButton:hover {
+	background-color:#5cbf2a;}
+
+.myButton:active {
+	position:relative;
+	top:1px;}
+	
+	.myButton1 {
+	background-color:#6699FF;
+	-moz-
+
+	border-radius:41px;
+	-webkit-border-radius:41px;
+	
+	border-radius:41px;
+	display:inline-block;
+
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	
+	font-size:19px;
+	padding:24px 189px;
+	text-
+
+	decoration:none;
+	text-shadow:0px 2px 0px #2f6627;
+}
+
+.myButton1:hover {
+	background-color:#6666FF;
+	text-transform:uppercase;}
+
+.myButton1:active {
+	position:relative;
+	top:1px;}
+	
+	.myButton2 {
+	background-color:#333333;
+	-moz-
+
+	border-radius:41px;
+	-webkit-border-radius:41px;
+	
+	border-radius:41px;
+	display:inline-block;
+
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	
+	font-size:19px;
+	padding:24px 200px;
+
+	decoration:none;
+	text-shadow:0px 2px 0px #2f6627;
+}
+
+.myButton2:hover {
+	background-color:#999999;}
+
+.myButton2:active {
+	position:relative;
+	top:1px;}
+
+  </style>
+  </head>
+  <body>
+      <p>
+	  <br><br><br>
+	  
+	  <table width="60%" border="0" align="center" hspace="50%" >
+        <tr>
+          <td colspan="2"><div align="center"><a href="#" class="myButton1">The famous Dilwara Temples are situated in</a></div></td>
+        </tr>
+        <tr>
+          <td><div align="center"><button class="myButton" onClick="myFunction(this.id)" id="a">U.P. &nbsp; &nbsp;</button></div></td>
+          <td><div align="center"><button class="myButton" onClick="myFunction(this.id)" id="b">Rajasthan</button></div></td>
+        </tr>
+        <tr>
+          <td><div align="center"><button class="myButton" onClick="myFunction(this.id)" id="c">Maharashtra</button></div></td>
+          <td><div align="center"><button class="myButton" onClick="myFunction(this.id)" id="d">M.P. &nbsp; &nbsp; </button></div></td>
+        </tr>
+      </table>
+	  <table width="60%" border="0" align="center" hspace="50%">
+	  <tr>
+          <td><div align="center"><a href="logout"><input type="button" class="myButton2" value="QUIT" id="quit"/></a></div></td>
+		   <td><div align="center"><button class="myButton2" onClick="halfFunc()" id="half">5050</button></div></td>
+        </tr>
+	  </table>
+	  <p id="demo"></p>
+	  <p>
+  </body>
+</html>
